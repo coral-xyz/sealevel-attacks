@@ -3,7 +3,25 @@
 version = 3
 
 [[package]]
-name = "account-data-matching-1"
+name = "account-data-matching-insecure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
+ "spl-token",
+]
+
+[[package]]
+name = "account-data-matching-recommended"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
+ "spl-token",
+]
+
+[[package]]
+name = "account-data-matching-secure"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
@@ -206,7 +224,25 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "84450d0b4a8bd1ba4144ce8ce718fbc5d071358b1e5384bace6536b3d1f2d5b3"
 
 [[package]]
-name = "arbitrary-cpi-5"
+name = "arbitrary-cpi-insecure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
+ "spl-token",
+]
+
+[[package]]
+name = "arbitrary-cpi-recommended"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
+ "spl-token",
+]
+
+[[package]]
+name = "arbitrary-cpi-secure"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
@@ -367,7 +403,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "771fe0050b883fcc3ea2359b1a96bcfbc090b7116eae7c3c512c7a083fdf23d3"
 
 [[package]]
-name = "bump-seed-canonicalization-6"
+name = "bump-seed-canonicalization-insecure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
+name = "bump-seed-canonicalization-recommended"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
+name = "bump-seed-canonicalization-secure"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
@@ -522,7 +572,14 @@ dependencies = [
 ]
 
 [[package]]
-name = "duplicate-mutable-accounts-6"
+name = "duplicate-mutable-accounts-insecure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
+name = "duplicate-mutable-accounts-secure"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
@@ -630,6 +687,13 @@ name = "humantime"
 version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9a3a5bfb195931eeb336b2a7b4d761daec841b97f947d34394601737a7bba5e4"
+
+[[package]]
+name = "initialization-insecure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
 
 [[package]]
 name = "instant"
@@ -811,7 +875,25 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "624a8340c38c1b80fd549087862da4ba43e08858af025b236e509b6649fc13d5"
 
 [[package]]
-name = "owner-checks-2"
+name = "owner-checks-insecure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
+ "spl-token",
+]
+
+[[package]]
+name = "owner-checks-recommended"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
+ "spl-token",
+]
+
+[[package]]
+name = "owner-checks-secure"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
@@ -842,6 +924,30 @@ dependencies = [
  "redox_syscall",
  "smallvec",
  "winapi",
+]
+
+[[package]]
+name = "pda-sharing-insecure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
+]
+
+[[package]]
+name = "pda-sharing-recommended"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
+]
+
+[[package]]
+name = "pda-sharing-secure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
 ]
 
 [[package]]
@@ -968,7 +1074,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f497285884f3fcff424ffc933e56d7cbca511def0c9831a7f9b5f6153e3cc89b"
 
 [[package]]
-name = "reinitialization-4"
+name = "reinitialization-secure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
+name = "reinitialization-secure-recommended"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
@@ -1073,7 +1186,21 @@ dependencies = [
 ]
 
 [[package]]
-name = "signer-check-0"
+name = "signer-authorization-insecure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
+name = "signer-authorization-recommended"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
+name = "signer-authorization-secure"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
@@ -1264,7 +1391,21 @@ dependencies = [
 ]
 
 [[package]]
-name = "type-cosplay-3"
+name = "type-cosplay-insecure"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
+name = "type-cosplay-recommended"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
+name = "type-cosplay-secure"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",

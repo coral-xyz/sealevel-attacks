@@ -1,0 +1,21 @@
+[package]
+name = "arbitrary-cpi-recommended"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "arbitrary_cpi_recommended"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.20.1"
+anchor-spl = "0.20.1"
+spl-token = { version = "3.1.1", features = ["no-entrypoint"] }
