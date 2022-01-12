@@ -485,6 +485,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "closing-accounts-insecure-still"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
+name = "closing-accounts-insecure-still-still"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
 name = "closing-accounts-recommended"
 version = "0.1.0"
 dependencies = [
