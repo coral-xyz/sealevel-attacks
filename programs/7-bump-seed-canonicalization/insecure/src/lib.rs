@@ -6,12 +6,7 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 pub mod bump_seed_canonicalization_insecure {
     use super::*;
 
-    pub fn set_value(
-        ctx: Context<BumpSeedInsecure>,
-        key: u64,
-        new_value: u64,
-        bump: u8,
-    ) -> ProgramResult {
+    pub fn set_value(ctx: Context<BumpSeed>, key: u64, new_value: u64, bump: u8) -> ProgramResult {
         let address =
             Pubkey::create_program_address(&[key.to_le_bytes().as_ref(), &[bump]], ctx.program_id)?;
         if address != ctx.accounts.data.key() {

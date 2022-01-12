@@ -9,4 +9,5 @@ members = [
     "programs/6-duplicate-mutable-accounts/*",
     "programs/7-bump-seed-canonicalization/*",
     "programs/8-pda-sharing/*",
+    "programs/9-closing-accounts/*",
 ]

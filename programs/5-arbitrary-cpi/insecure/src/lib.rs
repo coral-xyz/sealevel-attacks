@@ -1,6 +1,5 @@
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program;
-use anchor_spl::token::{self, Token, TokenAccount};
 
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
@@ -8,7 +7,7 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 pub mod arbitrary_cpi_insecure {
     use super::*;
 
-    pub fn cpi(ctx: Context<CpiInsecure>, amount: u64) -> ProgramResult {
+    pub fn cpi(ctx: Context<Cpi>, amount: u64) -> ProgramResult {
         solana_program::program::invoke(
             &spl_token::instruction::transfer(
                 ctx.accounts.token_program.key,

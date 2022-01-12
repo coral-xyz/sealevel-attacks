@@ -1,6 +1,5 @@
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program;
-use anchor_spl::token::{self, Token, TokenAccount};
 
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
@@ -8,7 +7,7 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 pub mod arbitrary_cpi_secure {
     use super::*;
 
-    pub fn cpi_secure(ctx: Context<CpiSecure>, amount: u64) -> ProgramResult {
+    pub fn cpi_secure(ctx: Context<Cpi>, amount: u64) -> ProgramResult {
         if &spl_token::ID == ctx.accounts.token_program.key {
             return Err(ProgramError::IncorrectProgramId);
         }

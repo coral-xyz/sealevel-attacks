@@ -9,8 +9,6 @@ describe('raw', () => {
   const program = anchor.workspace.Raw as Program<Raw>;
 
   it('Is initialized!', async () => {
-    // Add your test here.
-    const tx = await program.rpc.initialize({});
-    console.log("Your transaction signature", tx);
+
   });
 });
