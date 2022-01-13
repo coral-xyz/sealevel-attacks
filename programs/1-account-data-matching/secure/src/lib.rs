@@ -13,7 +13,7 @@ pub mod account_data_matching_secure {
         if ctx.accounts.authority.key != &token.owner {
             return Err(ProgramError::InvalidAccountData);
         }
-        msg!("GM");
+        msg!("Your acocunt balance is: {}", token.amount);
         Ok(())
     }
 }

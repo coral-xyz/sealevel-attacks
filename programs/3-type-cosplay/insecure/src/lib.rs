@@ -15,7 +15,7 @@ pub mod type_cosplay_insecure {
         if user.authority != ctx.accounts.authority.key() {
             return Err(ProgramError::InvalidAccountData);
         }
-        msg!("GM");
+        msg!("GM {}", user.authority);
         Ok(())
     }
 }

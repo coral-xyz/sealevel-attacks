@@ -8,7 +8,7 @@ pub mod type_cosplay_recommended {
     use super::*;
 
     pub fn update_user(ctx: Context<UpdateUser>) -> ProgramResult {
-        msg!("GM");
+        msg!("GM {}", ctx.accounts.user.authority);
         Ok(())
     }
 }
