@@ -8,7 +8,7 @@ pub mod owner_checks_recommended {
     use super::*;
 
     pub fn log_message(ctx: Context<LogMessage>) -> ProgramResult {
-        msg!("GM");
+        msg!("Your account balance is: {}", ctx.accounts.token.amount);
         Ok(())
     }
 }

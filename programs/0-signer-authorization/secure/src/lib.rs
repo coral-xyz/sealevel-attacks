@@ -10,7 +10,7 @@ pub mod signer_authorization_secure {
         if !ctx.accounts.authority.is_signer {
             return Err(ProgramError::MissingRequiredSignature);
         }
-        msg!("GM");
+        msg!("GM {}", ctx.accounts.authority.key().to_string());
         Ok(())
     }
 }

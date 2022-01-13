@@ -7,7 +7,7 @@ pub mod signer_authorization_recommended {
     use super::*;
 
     pub fn log_message(ctx: Context<LogMessage>) -> ProgramResult {
-        msg!("GM");
+        msg!("GM {}", ctx.accounts.authority.key().to_string());
         Ok(())
     }
 }

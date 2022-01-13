@@ -17,7 +17,7 @@ pub mod owner_checks_secure {
         if ctx.accounts.authority.key != &token.owner {
             return Err(ProgramError::InvalidAccountData);
         }
-        msg!("GM");
+        msg!("Your account balance is: {}", token.amount);
         Ok(())
     }
 }
