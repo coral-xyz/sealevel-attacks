@@ -8,7 +8,7 @@ pub mod arbitrary_cpi_secure {
     use super::*;
 
     pub fn cpi_secure(ctx: Context<Cpi>, amount: u64) -> ProgramResult {
-        if &spl_token::ID == ctx.accounts.token_program.key {
+        if &spl_token::ID != ctx.accounts.token_program.key {
             return Err(ProgramError::IncorrectProgramId);
         }
         solana_program::program::invoke(
