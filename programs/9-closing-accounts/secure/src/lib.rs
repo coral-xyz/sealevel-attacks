@@ -38,7 +38,7 @@ pub mod closing_accounts_secure {
 
         let mut discriminator = [0u8; 8];
         discriminator.copy_from_slice(&data[0..8]);
-        if discriminator == CLOSED_ACCOUNT_DISCRIMINATOR {
+        if discriminator != CLOSED_ACCOUNT_DISCRIMINATOR {
             return Err(ProgramError::InvalidAccountData);
         }
 
