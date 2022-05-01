@@ -13,7 +13,7 @@ pub mod bump_seed_canonicalization_secure {
         bump: u8,
     ) -> ProgramResult {
         let (address, expected_bump) =
-            Pubkey::find_program_address(&[key.to_le_bytes().as_ref(), &[bump]], ctx.program_id);
+            Pubkey::find_program_address(&[key.to_le_bytes().as_ref()], ctx.program_id);
 
         if address != ctx.accounts.data.key() {
             return Err(ProgramError::InvalidArgument);
@@ -35,10 +35,4 @@ pub struct BumpSeed<'info> {
 #[account]
 pub struct Data {
     value: u64,
-}
-
-#[account]
-pub struct DataWithBump {
-    value: u64,
-    bump: u8,
 }
