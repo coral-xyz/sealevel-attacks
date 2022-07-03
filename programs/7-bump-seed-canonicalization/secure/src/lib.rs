@@ -36,9 +36,3 @@ pub struct BumpSeed<'info> {
 pub struct Data {
     value: u64,
 }
-
-#[account]
-pub struct DataWithBump {
-    value: u64,
-    bump: u8,
-}
