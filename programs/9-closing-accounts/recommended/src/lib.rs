@@ -15,6 +15,7 @@ pub mod closing_accounts_recommended {
 pub struct Close<'info> {
     #[account(mut, close = destination)]
     account: Account<'info, Data>,
+    #[account(mut)]
     destination: AccountInfo<'info>,
 }
 
