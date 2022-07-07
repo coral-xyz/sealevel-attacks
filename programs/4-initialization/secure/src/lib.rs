@@ -15,6 +15,7 @@ pub mod reinitialization_secure_recommended {
         }
 
         user.authority = ctx.accounts.authority.key();
+        user.discriminator = true;
 
         let mut storage = ctx.accounts.user.try_borrow_mut_data()?;
         user.serialize(storage.deref_mut()).unwrap();
