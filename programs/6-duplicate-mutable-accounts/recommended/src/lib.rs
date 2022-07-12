@@ -3,13 +3,10 @@ use anchor_lang::prelude::*;
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
 #[program]
-pub mod duplicate_mutable_accounts_secure {
+pub mod duplicate_mutable_accounts_recommended {
     use super::*;
 
     pub fn update(ctx: Context<Update>, a: u64, b: u64) -> ProgramResult {
-        if ctx.accounts.user_a.key() == ctx.accounts.user_b.key() {
-            return Err(ProgramError::InvalidArgument)
-        }
         let user_a = &mut ctx.accounts.user_a;
         let user_b = &mut ctx.accounts.user_b;
 
@@ -21,6 +18,7 @@ pub mod duplicate_mutable_accounts_secure {
 
 #[derive(Accounts)]
 pub struct Update<'info> {
+    #[account(constraint = user_a.key() != user_b.key())]
     user_a: Account<'info, User>,
     user_b: Account<'info, User>,
 }
