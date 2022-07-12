@@ -3,7 +3,7 @@ use anchor_lang::prelude::*;
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
 #[program]
-pub mod duplicate_mutable_accounts_insecure {
+pub mod duplicate_mutable_accounts_secure {
     use super::*;
 
     pub fn update(ctx: Context<Update>, a: u64, b: u64) -> ProgramResult {
