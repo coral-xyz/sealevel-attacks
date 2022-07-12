@@ -614,6 +614,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "duplicate-mutable-accounts-recommended"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+]
+
+[[package]]
 name = "duplicate-mutable-accounts-secure"
 version = "0.1.0"
 dependencies = [
