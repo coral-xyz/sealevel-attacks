@@ -10,4 +10,5 @@ members = [
     "programs/7-bump-seed-canonicalization/*",
     "programs/8-pda-sharing/*",
     "programs/9-closing-accounts/*",
+    "programs/10-sysvar-address-checking/*"
 ]
