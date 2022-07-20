@@ -13,6 +13,13 @@ pub mod pda_sharing_secure {
             ctx.accounts.pool.withdraw_destination.as_ref(),
             &[ctx.accounts.pool.bump],
         ];
+        let (address, expected_bump) = Pubkey::find_program_address(seeds, ctx.program_id);
+        if address != ctx.accounts.pool.key() {
+            return Err(ProgramError::InvalidArgument);
+        }
+        if expected_bump != ctx.accounts.pool.bump {
+            return Err(ProgramError::InvalidArgument);
+        }
         token::transfer(ctx.accounts.transfer_ctx().with_signer(&[seeds]), amount)
     }
 }
