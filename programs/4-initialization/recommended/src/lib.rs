@@ -7,6 +7,8 @@ pub mod reinitialization_4 {
     use super::*;
 
     pub fn init(_ctx: Context<Init>) -> ProgramResult {
+        let user = &mut ctx.accounts.user;
+        user.authority = *ctx.accounts.authority.key;
         msg!("GM");
         Ok(())
     }
